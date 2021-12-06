@@ -1,0 +1,35 @@
+.speedDial {
+  position: fixed;
+  right: 3vmax;
+  top: 3vmax;
+}
+
+.speedDialIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+
+.homeIcon {
+  position: fixed;
+  left: 8vmax;
+  top: 2.5vmax;
+  z-index: 9;
+}
+
+.homeLogo {
+  width: 80px;
+  height: 55px;
+}
+
+.homeLogo:hover {
+  transition: all 0.5s;
+  filter: drop-shadow(0 0 5px tomato);
+}
+
+@media screen and (max-width: 600px) {
+  .homeLogo {
+    width: 50px;
+    height: 40px;
+  }
+}
