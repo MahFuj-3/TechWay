@@ -87,21 +87,22 @@
   color: rgba(0, 0, 0, 0.74);
 }
 
-.detailsBlock-3-1 > button:last-child {
+.detailsBlock-3-1-2 > button {
   border: none;
   cursor: pointer;
   color: white;
   transition: all 0.5s;
   background-color: tomato;
-  font: 500 0.7vmax "Roboto";
+  font: 500 0.8vmax "Roboto";
   border-radius: 20px;
   padding: 0.5vmax 2vmax;
   margin: 1vmax;
   outline: none;
 }
 
-.detailsBlock-3-1 > button:last-child:hover {
+.detailsBlock-3-1-2 > button:hover {
   background-color: rgb(214, 84, 61);
+  transform: scale(1.1);
 }
 
 .detailsBlock-3 > p {
@@ -124,10 +125,11 @@
   padding: 1rem 0;
 }
 
-.submitReview {
+.submitReview,
+.videoPreview {
   border: none;
   background-color: tomato;
-  font: 500 0.7vmax "Roboto";
+  font: 500 0.8vmax "Roboto";
   border-radius: 20px;
   padding: 0.6vmax 2vmax;
   margin: 1vmax 0;
@@ -136,7 +138,8 @@
   transition: all 0.5s;
   outline: none;
 }
-.submitReview:hover {
+.submitReview:hover,
+.videoPreview:hover {
   background-color: rgb(197, 68, 45);
   transform: scale(1.1);
 }
@@ -236,12 +239,18 @@
     flex-direction: column;
   }
 
-  .detailsBlock-3-1-1 {
+  .detailsBlock-3-1-1,
+  .detailsBlock-3-1-2 {
     padding: 2vmax 0;
   }
   .detailsBlock-3-1-1 > button {
     padding: 1.2vmax;
     width: 4vmax;
+  }
+  .detailsBlock-3-1-2 > button {
+    padding: 2vmax;
+    width: 8vmax;
+    font-size: 1.2vmax;
   }
 
   .detailsBlock-3-1-1 > input {
@@ -271,7 +280,8 @@
     font: 300 1.8vmax sans-serif;
   }
 
-  .submitReview {
+  .submitReview,
+  .videoPreview {
     font: 500 1.7vmax "Roboto";
     padding: 1.5vmax;
     width: 20vmax;

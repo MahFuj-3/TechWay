@@ -10,6 +10,7 @@ import DescriptionIcon from "@material-ui/icons/Description";
 import StorageIcon from "@material-ui/icons/Storage";
 import SpellcheckIcon from "@material-ui/icons/Spellcheck";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import LinkIcon from "@material-ui/icons/Link";
 import SideBar from "./Sidebar";
 import { NEW_PRODUCT_RESET } from "../../constants/productConstants";
 
@@ -23,6 +24,7 @@ const NewProduct = ({ history }) => {
   const [price, setPrice] = useState(0);
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
+  const [videoLink, setVideoLink] = useState("");
   const [stock, setStock] = useState(0);
   const [images, setImages] = useState([]);
   const [imagesPreview, setImagesPreview] = useState([]);
@@ -58,6 +60,7 @@ const NewProduct = ({ history }) => {
     myForm.set("price", price);
     myForm.set("description", description);
     myForm.set("category", category);
+    myForm.set("videoLink", videoLink);
     myForm.set("stock", stock);
 
     images.forEach((image) => {
@@ -141,6 +144,16 @@ const NewProduct = ({ history }) => {
                   </option>
                 ))}
               </select>
+            </div>
+
+            <div>
+              <LinkIcon />
+              <input
+                type="text"
+                placeholder="Product Preview Video URL"
+                value={videoLink}
+                onChange={(e) => setVideoLink(e.target.value)}
+              />
             </div>
 
             <div>

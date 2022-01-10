@@ -31,8 +31,11 @@ const Home = () => {
 
           <div className="banner">
             <p>Welcome to TechWay</p>
+            <div className="bMessage">
+              <p>The Largest Movie & Anime Prop</p> <p>&</p>
+              <p>Costume Store in the Country</p>
+            </div>
             <h1>WE ARE HERE TO FULFILL YOUR DESIRE</h1>
-
             <a href="#container">
               <button>
                 <CgMouse /> Scroll

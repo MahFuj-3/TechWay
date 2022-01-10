@@ -21,10 +21,12 @@ import {
 } from "@material-ui/core";
 import { Rating } from "@material-ui/lab";
 import { NEW_REVIEW_RESET } from "../../constants/productConstants";
+import { useHistory } from "react-router-dom";
 
 const ProductDetails = ({ match }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
+  const history = useHistory();
 
   const { product, loading, error } = useSelector(
     (state) => state.productDetails
@@ -63,6 +65,16 @@ const ProductDetails = ({ match }) => {
   const addToCartHandler = () => {
     dispatch(addItemsToCart(match.params.id, quantity));
     alert.success("Item Added To Cart");
+  };
+  const buyNowHandler = () => {
+    dispatch(addItemsToCart(match.params.id, quantity));
+
+    history.push("/login?redirect=cart");
+  };
+
+  const videoPreviewToggle = () => {
+    const url = product.videoLink;
+    window.open(url);
   };
 
   const submitReviewToggle = () => {
@@ -141,12 +153,20 @@ const ProductDetails = ({ match }) => {
                     <input readOnly type="number" value={quantity} />
                     <button onClick={increaseQuantity}>+</button>
                   </div>
-                  <button
-                    disabled={product.stock < 1 ? true : false}
-                    onClick={addToCartHandler}
-                  >
-                    Add to Cart
-                  </button>
+                  <div className="detailsBlock-3-1-2">
+                    <button
+                      disabled={product.stock < 1 ? true : false}
+                      onClick={addToCartHandler}
+                    >
+                      Add to Cart
+                    </button>
+                    <button
+                      disabled={product.stock < 1 ? true : false}
+                      onClick={buyNowHandler}
+                    >
+                      Buy Now
+                    </button>
+                  </div>
                 </div>
 
                 <p>
@@ -161,6 +181,9 @@ const ProductDetails = ({ match }) => {
                 Description : <p>{product.description}</p>
               </div>
 
+              <button onClick={videoPreviewToggle} className="videoPreview">
+                Watch Video Preview
+              </button>
               <button onClick={submitReviewToggle} className="submitReview">
                 Submit Review
               </button>

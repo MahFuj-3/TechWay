@@ -18,7 +18,7 @@ const About = () => {
           <div>
             <Avatar
               style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-              src="https://res.cloudinary.com/gonimbus/image/upload/v1638281933/avatars/fnuetkokilzba99k5q0r.jpg"
+              src="https://res.cloudinary.com/gonimbus/image/upload/v1638706506/avatars/cd5uwcvprvqoon82swot.jpg"
               alt="Founder"
             />
             <Typography>Md. Mahfujur Rahman</Typography>
