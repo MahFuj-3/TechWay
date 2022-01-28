@@ -13,13 +13,21 @@
   color: black;
 }
 
-.banner > h1 {
+.banner > h1,
+.text > h1 {
+  margin: 5vmax;
+  font: 600 2.5vmax "Roboto";
+  margin-left: 45vmax;
+}
+.banner > h2,
+.text > h2 {
   margin: 5vmax;
   font: 600 2.5vmax "Roboto";
   margin-left: 45vmax;
 }
 
-.banner > p {
+.banner > p,
+.text > p {
   font: 500 3vmax "Lucida Sans";
 }
 
@@ -143,8 +151,24 @@
     margin: 0 0.5vmax;
     font: 300 1vmax "Roboto";
   }
+  .text{
+    margin-top: 6rem;
+  }
+  .text > h1{
+    margin: 0;
+    padding: 0;
+  }
+  .text > h2{
+    margin: 2rem 0 1rem 4rem;
+    font: 400 2vmax "Roboto";
+  }
+
+  .bMessage{
+    margin: 2rem 0 0 10rem;
+    padding: 0;
+  }
 
   .banner > a > button {
-    margin: 0 0 5vmax 0;
+    margin-right: 20rem;
   }
 }

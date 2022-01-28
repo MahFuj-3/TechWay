@@ -30,12 +30,14 @@ const Home = () => {
           <MetaData title="TechWay" />
 
           <div className="banner">
-            <p>Welcome to TechWay</p>
-            <div className="bMessage">
-              <p>The Largest Movie & Anime Prop</p> <p>&</p>
-              <p>Costume Store in the Country</p>
+            <div className="text">
+              <p>Welcome to TechWay</p>
+              <div className="bMessage">
+                <p>The Largest Movie & Anime Prop</p> <p>&</p>
+                <p>Costume Store in the Country</p>
+              </div>
+              <h2>WE ARE HERE TO FULFILL YOUR DESIRE</h2>
             </div>
-            <h1>WE ARE HERE TO FULFILL YOUR DESIRE</h1>
             <a href="#container">
               <button>
                 <CgMouse /> Scroll
